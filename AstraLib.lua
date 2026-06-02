@@ -1,14 +1,4 @@
---[[
-================================================================================
-    ___    _____ _____ ____  ___    __  __ ____
-   /   |  / ___// ___// __ \/   |  / / / //  _/
-  / /| |  \__ \ \__ \/ /_/ / /| | / / / / / /
- / ___ | ___/ /___/ / _, _/ ___ |/ /_/ /_/ /
-/_/  |_|/____//____/_/ |_/_/  |_|\____//___/
 
-    AstraUI — Premium Roblox GUI Library Framework (Lag-Free Optimized Version)
-================================================================================
---]]
 
 -- // ============================================================
 -- // 1. SERVICES & CONSTANTS
@@ -197,7 +187,7 @@ local function BuildIcon(parent: GuiObject, iconKey: string, size: number, color
 end
 
 -- // ============================================================
--- // 3. THEME ENGINE (Komplett neu designt & performance-optimiert)
+-- // 3. THEME ENGINE
 -- // ============================================================
 
 local Themes = {
@@ -233,105 +223,8 @@ local Themes = {
 		SurfaceTransparency = 0.05,
 		DockTransparency    = 0.15,
 	},
-	discord = {
-		Name = "Discordia",
-		BgPrimary       = Color3.fromHex("#313338"),
-		BgSecondary     = Color3.fromHex("#2B2D31"),
-		BgTertiary      = Color3.fromHex("#1E1F22"),
-		BgSurface       = Color3.fromHex("#313338"),
-		BgDock          = Color3.fromHex("#1E1F22"),
-		AccentPrimary   = Color3.fromHex("#5865F2"),
-		TextPrimary     = Color3.fromHex("#F2F3F5"),
-		TextSecondary   = Color3.fromHex("#B5BAC1"),
-		TextTertiary    = Color3.fromHex("#80848E"),
-		BorderColor     = Color3.fromHex("#1E1F22"),
-		BorderActive    = Color3.fromHex("#5865F2"),
-		SurfaceTransparency = 0.02,
-		DockTransparency    = 0.05,
-	},
-	hacker = {
-		Name = "Terminal Green",
-		BgPrimary       = Color3.fromHex("#0D1117"),
-		BgSecondary     = Color3.fromHex("#161B22"),
-		BgTertiary      = Color3.fromHex("#21262D"),
-		BgSurface       = Color3.fromHex("#0D1117"),
-		BgDock          = Color3.fromHex("#010409"),
-		AccentPrimary   = Color3.fromHex("#39D353"),
-		TextPrimary     = Color3.fromHex("#C9D1D9"),
-		TextSecondary   = Color3.fromHex("#8B949E"),
-		TextTertiary    = Color3.fromHex("#484F58"),
-		BorderColor     = Color3.fromHex("#30363D"),
-		BorderActive    = Color3.fromHex("#238636"),
-		SurfaceTransparency = 0.1,
-		DockTransparency    = 0.1,
-	},
-	dracula = {
-		Name = "Dracula",
-		BgPrimary       = Color3.fromHex("#282A36"),
-		BgSecondary     = Color3.fromHex("#44475A"),
-		BgTertiary      = Color3.fromHex("#6272A4"),
-		BgSurface       = Color3.fromHex("#282A36"),
-		BgDock          = Color3.fromHex("#1E1F29"),
-		AccentPrimary   = Color3.fromHex("#FF79C6"),
-		TextPrimary     = Color3.fromHex("#F8F8F2"),
-		TextSecondary   = Color3.fromHex("#8BE9FD"),
-		TextTertiary    = Color3.fromHex("#6272A4"),
-		BorderColor     = Color3.fromHex("#44475A"),
-		BorderActive    = Color3.fromHex("#BD93F9"),
-		SurfaceTransparency = 0.05,
-		DockTransparency    = 0.1,
-	},
-	ocean = {
-		Name = "Deep Ocean",
-		BgPrimary       = Color3.fromHex("#0F172A"),
-		BgSecondary     = Color3.fromHex("#1E293B"),
-		BgTertiary      = Color3.fromHex("#334155"),
-		BgSurface       = Color3.fromHex("#0F172A"),
-		BgDock          = Color3.fromHex("#020617"),
-		AccentPrimary   = Color3.fromHex("#38BDF8"),
-		TextPrimary     = Color3.fromHex("#F8FAFC"),
-		TextSecondary   = Color3.fromHex("#94A3B8"),
-		TextTertiary    = Color3.fromHex("#475569"),
-		BorderColor     = Color3.fromHex("#334155"),
-		BorderActive    = Color3.fromHex("#0EA5E9"),
-		SurfaceTransparency = 0.05,
-		DockTransparency    = 0.1,
-	},
-	sunset = {
-		Name = "Vapor Sunset",
-		BgPrimary       = Color3.fromHex("#2A1B38"),
-		BgSecondary     = Color3.fromHex("#3D2C4D"),
-		BgTertiary      = Color3.fromHex("#523D64"),
-		BgSurface       = Color3.fromHex("#2A1B38"),
-		BgDock          = Color3.fromHex("#1A1025"),
-		AccentPrimary   = Color3.fromHex("#FF71CE"),
-		TextPrimary     = Color3.fromHex("#FFF0F5"),
-		TextSecondary   = Color3.fromHex("#B58EDC"),
-		TextTertiary    = Color3.fromHex("#8965B2"),
-		BorderColor     = Color3.fromHex("#523D64"),
-		BorderActive    = Color3.fromHex("#01CDFE"),
-		SurfaceTransparency = 0.05,
-		DockTransparency    = 0.1,
-	},
-	retro = {
-		Name = "Win95 Retro",
-		BgPrimary       = Color3.fromHex("#C0C0C0"),
-		BgSecondary     = Color3.fromHex("#DFDFDF"),
-		BgTertiary      = Color3.fromHex("#808080"),
-		BgSurface       = Color3.fromHex("#C0C0C0"),
-		BgDock          = Color3.fromHex("#A0A0A0"),
-		AccentPrimary   = Color3.fromHex("#000080"),
-		TextPrimary     = Color3.fromHex("#000000"),
-		TextSecondary   = Color3.fromHex("#222222"),
-		TextTertiary    = Color3.fromHex("#555555"),
-		BorderColor     = Color3.fromHex("#FFFFFF"),
-		BorderActive    = Color3.fromHex("#000000"),
-		SurfaceTransparency = 0,
-		DockTransparency    = 0,
-	},
 }
 
-local ThemeOrder = { "light", "dark", "discord", "hacker", "dracula", "ocean", "sunset", "retro" }
 local currentThemeId = "dark"
 local currentTheme = Themes.dark
 
@@ -564,7 +457,7 @@ local function Notify(text: string)
 end
 
 -- // ============================================================
--- // 7. GUI LIBRARY KLASSE (Performance-optimiert)
+-- // 7. GUI LIBRARY CLASS
 -- // ============================================================
 
 local GuiLibrary = {}
@@ -1163,7 +1056,7 @@ function GuiLibrary:CreateSlider(parent: GuiObject, config: { label: string, min
 	track.BorderSizePixel = 0
 	track.Text = ""
 	track.AutoButtonColor = false
-	track.Parent = track.Parent and row
+	track.Parent = row  -- BEHOBEN: Hier war zuvor ein falscher Zuweisungsfehler!
 	CreateCorner(track, UDim.new(1, 0))
 
 	local fill = Instance.new("Frame")
@@ -1774,108 +1667,16 @@ function SystemAPI.ToggleLauncher(self: any)
 end
 
 -- // ============================================================
--- // 11. TEMPLATE APPS
--- // ============================================================
-
-local function RegisterTemplateApps(system: any, gui: any)
-	system:RegisterApp({
-		id = "ui_template", name = "Components", icon = "layout",
-		build = function(win)
-			local t1 = gui:CreateTab(win, { id = "inputs", label = "Inputs", icon = "lines" })
-			gui:CreateSectionHeader(t1, "Basic Inputs")
-			gui:CreateButton(t1, { label = "Click Me", onClick = function() Notify("Clicked!") end })
-			gui:CreateToggle(t1, { label = "Feature Toggle", default = true })
-			gui:CreateSlider(t1, { label = "Size Modifier", min = 10, max = 200, default = 100 })
-
-			local t2 = gui:CreateTab(win, { id = "menus", label = "Menus", icon = "layout" })
-			gui:CreateDropdown(t2, { label = "Select Mode", options = { "Mode A", "Mode B", "Mode C" } })
-			gui:CreateTextbox(t2, { placeholder = "Type something..." })
-		end,
-	})
-
-	system:RegisterApp({
-		id = "settings", name = "Settings", icon = "gear",
-		build = function(win)
-			local t = gui:CreateTab(win, { id = "themes", label = "Themes", icon = "gear" })
-			gui:CreateSectionHeader(t, "Select System Theme")
-
-			local themeCards = {}
-			for _, themeId in ThemeOrder do
-				local themeData = Themes[themeId]
-				local card = Instance.new("TextButton")
-				card.Size = UDim2.new(1, 0, 0, 52)
-				card.BackgroundColor3 = currentTheme.BgTertiary
-				card.BorderSizePixel = 0
-				card.Text = ""
-				card.AutoButtonColor = false
-				card.LayoutOrder = gui:_NextOrder(t)
-				card.Parent = t
-				CreateCorner(card, UDim.new(0, 10))
-				RegisterThemed(card, { BackgroundColor3 = "BgTertiary" })
-
-				local cardStroke = Instance.new("UIStroke")
-				cardStroke.Thickness = 2
-				cardStroke.Color = if themeId == currentThemeId then currentTheme.AccentPrimary else currentTheme.BorderColor
-				cardStroke.Parent = card
-
-				local bgSw = Instance.new("Frame")
-				bgSw.Size = UDim2.new(0, 20, 0, 20)
-				bgSw.Position = UDim2.new(0, 12, 0.5, -10)
-				bgSw.BackgroundColor3 = themeData.BgPrimary
-				bgSw.BorderSizePixel = 0
-				bgSw.Parent = card
-				CreateCorner(bgSw, UDim.new(0, 4))
-
-				local accSw = Instance.new("Frame")
-				accSw.Size = UDim2.new(0, 20, 0, 20)
-				accSw.Position = UDim2.new(0, 40, 0.5, -10)
-				accSw.BackgroundColor3 = themeData.AccentPrimary
-				accSw.BorderSizePixel = 0
-				accSw.Parent = card
-				CreateCorner(accSw, UDim.new(0, 4))
-
-				local nameLabel = Instance.new("TextLabel")
-				nameLabel.Size = UDim2.new(1, -100, 1, 0)
-				nameLabel.Position = UDim2.new(0, 72, 0, 0)
-				nameLabel.BackgroundTransparency = 1
-				nameLabel.Text = themeData.Name
-				nameLabel.TextColor3 = currentTheme.TextPrimary
-				nameLabel.Font = FONT_MEDIUM
-				nameLabel.TextSize = 13
-				nameLabel.TextXAlignment = Enum.TextXAlignment.Left
-				nameLabel.Parent = card
-				RegisterThemed(nameLabel, { TextColor3 = "TextPrimary" })
-
-				table.insert(themeCards, { Card = card, Stroke = cardStroke, ThemeId = themeId })
-
-				card.MouseButton1Click:Connect(function()
-					for _, tc in themeCards do TweenService:Create(tc.Stroke, TWEEN_FAST, { Color = currentTheme.BorderColor }):Play() end
-					TweenService:Create(cardStroke, TWEEN_FAST, { Color = themeData.AccentPrimary }):Play()
-					ApplyTheme(themeId, true)
-					task.defer(function() system:RebuildAll() end)
-					Notify("Theme: " .. themeData.Name)
-				end)
-
-				card.MouseEnter:Connect(function() TweenService:Create(card, TWEEN_FAST, { BackgroundTransparency = 0.1 }):Play() end)
-				card.MouseLeave:Connect(function() TweenService:Create(card, TWEEN_FAST, { BackgroundTransparency = 0 }):Play() end)
-			end
-		end,
-	})
-end
-
--- // ============================================================
--- // 12. BOOT SEQUENCE & EXPORTS
+-- // 11. BOOT SEQUENCE & EXPORTS (Ohne Default-Apps)
 -- // ============================================================
 
 local Gui = GuiLibrary.new()
 local System = SystemAPI.new()
 System:Init(Gui)
-RegisterTemplateApps(System, Gui)
 ApplyTheme("dark", false)
 
 task.delay(0.5, function() Notify("AstraUI Loaded via GitHub!") end)
 
--- Diese Tabelle wird an den Loadstring zurückgegeben
 return {
 	Gui = Gui,
 	System = System,
